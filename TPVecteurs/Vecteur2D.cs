@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TPVecteurs
 {
-    public class Vecteur2D
+    public class Vecteur2D : IComparable
     {
         public Vecteur2D()
         {
@@ -41,6 +41,20 @@ namespace TPVecteurs
         public virtual double Norme()
         {
             return Math.Sqrt((X * X) + (Y * Y));
+        }
+
+        public int CompareTo(object? obj)
+        {
+            if ( obj is Vecteur2D d) 
+            {
+                // si obj est un vecteur
+                return Convert.ToInt32(this.Norme() - d.Norme());
+            }
+            else
+            {
+                // si obj n'est pas un vecteur
+                return 100;
+            }
         }
     }
 }
