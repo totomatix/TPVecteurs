@@ -59,3 +59,6 @@ else
 {
     Console.WriteLine("Les deux vecteurs sont différents.");
 }
+
+Console.WriteLine("Le nombre de vecteurs créés est : " + Vecteur2D.CompteurVecteurs);
+Console.WriteLine("Le nombre de vecteurs créés est : " + Vecteur3D.CompteurVecteurs);
